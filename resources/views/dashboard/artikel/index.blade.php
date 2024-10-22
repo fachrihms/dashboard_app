@@ -3,58 +3,51 @@
 @section('title', 'User List')
 
 @section('content')
-    <div class="middle-content container-xxl p-0">
-        <div class="row">
-
-            <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
-                <div class="statbox widget box box-shadow">
-                    <div class="widget-content widget-content-area">
-                        <table id="html5-extension" class="table dt-table-hover" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>Nama</th>
-                                    <th>Email</th>
-                                    <th>Tanggal lahir</th>
-                                    <th>Kode voucher</th>
-                                    <th>Expired</th>
-                                    <th>Salary</th>
-                                    <th>Extn.</th>
-                                    <th>Image</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tbody>
-                                @for ($i = 0; $i < 10; $i++)
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                        <td>5421</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <div class="usr-img-frame mr-2 rounded-circle">
-                                                    <img alt="avatar" class="img-fluid rounded-circle"
-                                                        src="./src/assets/img/boy.png">
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                @endfor
-                            </tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
+    <div class="container-fluid">
+        <!-- Div untuk membungkus judul dengan latar belakang putih -->
+        <div class="bg-white p-3 rounded shadow-sm mb-4" style="margin-top: 20px;">
+            <h1 class="my-0">Daftar Artikel</h1>
         </div>
 
-
+        <!-- Div untuk membungkus tabel -->
+        <div class="bg-white p-3 rounded shadow-sm">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>ID User</th>
+                            <th>Image</th>
+                            <th>Link</th>
+                            <th>Dibuat Pada</th>
+                            <th>Diperbarui Pada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($artikels as $artikel)
+                            <tr>
+                                <td>{{ $artikel->id }}</td>
+                                <td>{{ $artikel->judul }}</td>
+                                <td>{{ $artikel->isi }}</td>
+                                <td>{{ $artikel->id_user }}</td>
+                                <td>
+                                    @if ($artikel->image)
+                                        <img src="{{ asset('storage/' . $artikel->image) }}" alt="{{ $artikel->judul }}"
+                                            width="100">
+                                    @else
+                                        Tidak ada gambar
+                                    @endif
+                                </td>
+                                <td>{{ $artikel->link }}</td>
+                                <td>{{ $artikel->created_at }}</td>
+                                <td>{{ $artikel->updated_at }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- Akhir div membungkus tabel -->
     </div>
-
 @endsection

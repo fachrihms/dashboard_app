@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Users;
+use App\Models\Produk;
+use App\Models\Artikel;
+
 
 class DashboardNQController extends Controller
 {
@@ -26,11 +29,19 @@ class DashboardNQController extends Controller
     }
     public function produk()
     {
-        return view('dashboard.produk.index');
+        // Ambil semua data produk dari database
+        $produk = Produk::all();
+
+        // Kirim data ke view 'dashboard.index'
+        return view('dashboard.produk.index', ['produks' => $produk]);
     }
     public function artikel()
     {
-        return view('dashboard.artikel.index');
+        // Ambil semua data produk dari database
+        $artikel = Artikel::all();
+
+        // Kirim data ke view 'dashboard.index'
+        return view('dashboard.artikel.index', ['artikels' => $artikel]);
     }
     public function voucher()
     {
