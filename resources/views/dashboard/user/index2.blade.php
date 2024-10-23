@@ -34,7 +34,6 @@
 
   <link rel="stylesheet" type="text/css" href="{{asset('src/plugins/css/dark/table/datatable/dt-global_style.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('src/plugins/css/dark/table/datatable/custom_dt_miscellaneous.css')}}">
-
   <!-- END PAGE LEVEL STYLES -->
 </head>
 

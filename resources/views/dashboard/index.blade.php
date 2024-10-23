@@ -27,6 +27,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+  <link rel="stylesheet" type="text/css" href="{{asset('src/plugins/src/table/datatable/datatables.css')}}">
+
+  <link rel="stylesheet" type="text/css" href="{{asset('src/plugins/css/light/table/datatable/dt-global_style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('src/plugins/css/light/table/datatable/custom_dt_miscellaneous.css')}}">
+
+  <link rel="stylesheet" type="text/css" href="{{asset('src/plugins/css/dark/table/datatable/dt-global_style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('src/plugins/css/dark/table/datatable/custom_dt_miscellaneous.css')}}">
+  <!-- END PAGE LEVEL STYLES -->
 
 </head>
 
