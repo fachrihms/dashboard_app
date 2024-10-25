@@ -103,7 +103,7 @@
                                 <li><a class="dropdown-item" href="user-profile.html">Profile</a></li>
                                 <li><a class="dropdown-item" href="app-mailbox.html">Inbox</a></li>
                                 <li><a class="dropdown-item" href="auth-boxed-lockscreen.html">Lock Screen</a></li>
-                                <li><a class="dropdown-item" href="index.html">Log Out</a></li>
+                                <li><a class="dropdown-item" href="{{route('/login')}}">Log Out</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -123,14 +123,12 @@
 
         <!--  BEGIN SIDEBAR  -->
         <div class="sidebar-wrapper sidebar-theme">
-
             <nav id="sidebar">
-
-                <div class="navbar-nav theme-brand flex-row  text-center">
+                <div class="navbar-nav theme-brand flex-row text-center">
                     <div class="nav-logo">
                         <div class="nav-item theme-logo">
                             <a href="./index.html">
-                                <img src="./src/assets/img/Logo-NQ-3D-1.png">
+                                <img src="./src/assets/img/Logo-NQ-3D-1.png" alt="Logo">
                             </a>
                         </div>
                         <div class="nav-item theme-text">
@@ -138,36 +136,34 @@
                         </div>
                     </div>
                     <div class="nav-item sidebar-toggle">
-                        <button class="btns btn-toggle" id="settingsToggle">
-                            <i class="fas fa-cog"></i> <!-- Ikon pengaturan dari Font Awesome -->
+                        <button class="btn btn-toggle" id="settingsToggle">
+                            <i class="fas fa-cog"></i>
                         </button>
                     </div>
                 </div>
                 <div class="shadow-bottom"></div>
-
-                <ul class="list-unstyled menu-categories" id="accordionExample"> <!-- MENU BAR SEBELAH KIRI -->
+        
+                <ul class="list-unstyled menu-categories" id="accordionExample">
                     <li class="menu active">
                         <a href="#dashboard" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                    stroke-linejoin="round" class="feather feather-home">
                                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                     <polyline points="9 22 9 12 15 12 15 22"></polyline>
                                 </svg>
                                 <span>NQ Dashboard</span>
                             </div>
                             <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-chevron-right">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </div>
                         </a>
-                        <ul class="collapse submenu list-unstyled show" id="dashboard"
-                            data-bs-parent="#accordionExample">
+                        <ul class="collapse submenu list-unstyled show" id="dashboard" data-bs-parent="#accordionExample">
                             <li>
                                 <a href="{{ route('user') }}"> User </a>
                             </li>
@@ -177,8 +173,27 @@
                             <li>
                                 <a href="{{ route('produk') }}"> Produk </a>
                             </li>
-                            <li>
-                                <a href="{{ route('artikel') }}"> Artikel </a>
+                            <li class="has-sub">
+                                <a href="#artikelSubmenu" data-bs-toggle="collapse" class="dropdown-toggle" 
+                                   aria-expanded="false">
+                                    Artikel
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" 
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                        stroke-linejoin="round" class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </a>
+                                <ul class="collapse submenu list-unstyled" id="artikelSubmenu">
+                                    <li>
+                                        <a href="{{ route('artikel') }}">Semua Artikel</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('artikelCreate')}}"s>Tambah Artikel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Kategori Artikel</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="{{ route('voucher') }}"> Voucher </a>
@@ -186,10 +201,9 @@
                         </ul>
                     </li>
                 </ul>
-
             </nav>
-
         </div>
+        
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->

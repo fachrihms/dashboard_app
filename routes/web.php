@@ -31,3 +31,5 @@ Route::get('/paket', [DashboardNQController::class, 'paket'])->name('paket');
 Route::get('/produk', [DashboardNQController::class, 'produk'])->name('produk');
 Route::get('/artikel', [DashboardNQController::class, 'artikel'])->name('artikel');
 Route::get('/voucher', [DashboardNQController::class, 'voucher'])->name('voucher');
+Route::get('/artikelCreate', [DashboardNQController::class, 'artikelCreate'])->name('artikelCreate');
+Route::get('/ckEditorUpload', [DashboardNQController::class, 'ckEditorUpload'])->name('ckEditorUpload');
