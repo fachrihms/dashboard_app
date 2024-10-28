@@ -127,8 +127,8 @@
                 <div class="navbar-nav theme-brand flex-row text-center">
                     <div class="nav-logo">
                         <div class="nav-item theme-logo">
-                            <a href="{{route('user')}}">
-                                <img src="./src/assets/img/Logo-NQ-3D-1.png" alt="Logo">
+                            <a href="./index.html">
+                                <img src="./src/assets/img/Logo-NQ-3D-1.png">
                             </a>
                         </div>
                         <div class="nav-item theme-text">
@@ -173,34 +173,16 @@
                             <li>
                                 <a href="{{ route('produk') }}" class="text-decoration-none"> Produk </a>
                             </li>
-                            <li class="has-sub">
-                                <a href="#artikelSubmenu" data-bs-toggle="collapse" class="dropdown-toggle text-decoration-none"  
-                                   aria-expanded="false">
-                                    Artikel
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" 
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
-                                        stroke-linejoin="round" class="feather feather-chevron-right">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                    </svg>
-                                </a>
-                                <ul class="collapse submenu list-unstyled" id="artikelSubmenu">
-                                    <li>
-                                        <a href="{{ route('artikel') }}" class="text-decoration-none">Semua Artikel</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('artikelCreate')}}"class="text-decoration-none">Tambah Artikel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="text-decoration-none">Kategori Artikel</a>
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="{{ route('artikel') }}"> Artikel </a>
                             </li>
                             <li>
-                                <a href="{{ route('voucher') }}" class="text-decoration-none"> Voucher </a>
+                                <a href="{{ route('voucher') }}"> Voucher </a>
                             </li>
                         </ul>
                     </li>
                 </ul>
+
             </nav>
         </div>
         
