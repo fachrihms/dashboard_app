@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Users;
 use App\Models\Produk;
 use App\Models\Artikel;
+use Laravel\Socialite\Facades\Socialite;
 
 
 class DashboardNQController extends Controller
@@ -42,6 +43,16 @@ class DashboardNQController extends Controller
 
         // Kirim data ke view 'dashboard.index'
         return view('dashboard.artikel.index', ['artikels' => $artikel]);
+    }
+    public function artikelCreate()
+    {
+        // Kirim data ke view 'dashboard.index'
+        return view('dashboard.artikel.create');
+    }
+    public function ckEditorUpload()
+    {
+        // Kirim data ke view 'dashboard.index'
+        return view('dashboard.artikel.create');
     }
     public function voucher()
     {
