@@ -43,6 +43,16 @@ class DashboardNQController extends Controller
         // Kirim data ke view 'dashboard.index'
         return view('dashboard.artikel.index', ['artikels' => $artikel]);
     }
+    public function artikelCreate()
+    {
+        // Kirim data ke view 'dashboard.index'
+        return view('dashboard.artikel.create');
+    }
+    public function ckEditorUpload()
+    {
+        // Kirim data ke view 'dashboard.index'
+        return view('dashboard.artikel.create');
+    }
     public function voucher()
     {
         return view('dashboard.voucher.index');
