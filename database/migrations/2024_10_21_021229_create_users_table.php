@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('google_id')->nullable();
             $table->date('tanggal_lahir')->nullable();
             $table->unsignedBigInteger('referal_id')->nullable()->index('users_referal_id_foreign');
             $table->string('referal_code')->nullable();

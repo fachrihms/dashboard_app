@@ -13,7 +13,6 @@
                             <table id="html5-extension" class="table dt-table-hover" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
                                         <th>User ID</th>
                                         <th>Nama</th>
                                         <th>Email</th>
@@ -26,8 +25,6 @@
                                     @php $no = 0; @endphp
                                     @foreach ($data_users as $item)
                                         <tr>
-                                            <td>{{ ($data_users->currentPage() - 1) * $data_users->perPage() + $loop->iteration }}
-                                            </td>
                                             <td>{{ $item['id'] }}</td>
                                             <td>{{ $item['name'] }}</td>
                                             <td>{{ $item['email'] }}</td>
@@ -52,7 +49,7 @@
                                                         <a class="dropdown-item" href="#">Delete</a>
                                                         <a class="dropdown-item" href="#">Grant Permission</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" href="#">Separated link</a>
+                                                        <a class="dropdown-item" href="#">View Details</a>
                                                     </div>
                                                 </div>
                                             </td>

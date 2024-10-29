@@ -63,7 +63,6 @@
           class="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center ms-lg-auto me-lg-0 mx-auto">
           <div class="card">
             <div class="card-body">
-
               <div class="row">
                 <div class="col-md-12 mb-3">
 
@@ -113,15 +112,14 @@
 
                 <div class="col-sm-4 col-12">
                 </div>
-
-                <div class="col-sm-4 col-12">
+                <a class="col-sm-4 col-12" href="{{route('google-auth')}}">
                   <div class="mb-4">
                     <button class="btn  btn-social-login w-100 ">
                       <img src="./src/assets/img/google-gmail.svg" alt="" class="img-fluid">
                       <span class="btn-text-inner">Google</span>
                     </button>
                   </div>
-                </div>
+                </a>
 
                 <div class="col-sm-4 col-12">
                 </div>
