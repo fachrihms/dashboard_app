@@ -25,6 +25,7 @@
                             <th>Gambar</th>
                             <th>Dibuat Pada</th>
                             <th>Diperbarui Pada</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +48,28 @@
                                 </td>
                                 <td>{{ $produk->created_at }}</td>
                                 <td>{{ $produk->updated_at }}</td>
+                                <td>                                                
+                                    <div class="btn-group">
+                                    <button type="button" class="btn btn-dark btn-sm">Select</button>
+                                    <button type="button"
+                                        class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-chevron-down">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Grant Permission</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">View Details</a>
+                                    </div>
+                                </div></td>
                             </tr>
                         @endforeach
                     </tbody>
