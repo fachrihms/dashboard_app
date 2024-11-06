@@ -123,10 +123,10 @@
                                     width="30">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
-                                <li><a class="dropdown-item px-4" href="user-profile.html">Profile</a></li>
-                                <li><a class="dropdown-item px-4" href="app-mailbox.html">Inbox</a></li>
-                                <li><a class="dropdown-item px-4" href="auth-boxed-lockscreen.html">Lock Screen</a></li>
-                                <li><a class="dropdown-item px-4" href="{{route('login')}}">Log Out</a></li>
+                                <li><a class="dropdown-item" href="user-profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="app-mailbox.html">Inbox</a></li>
+                                <li><a class="dropdown-item" href="auth-boxed-lockscreen.html">Lock Screen</a></li>
+                                <li><a class="dropdown-item" href="index.html">Log Out</a></li>
                             </ul>
                         </li>             
                     </ul>
@@ -190,75 +190,22 @@
                             <li>
                                 <a href="{{ route('user') }}" class="text-decoration-none"> User </a>
                             </li>
-                            <li class="has-sub">
-                                <a href="#paketSubmenu" data-bs-toggle="collapse" class="dropdown-toggle text-decoration-none"  
-                                aria-expanded="false">
-                                 Paket
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" 
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
-                                     stroke-linejoin="round" class="feather feather-chevron-right">
-                                     <polyline points="9 18 15 12 9 6"></polyline>
-                                 </svg>
-                             </a>
-                             <ul class="collapse submenu list-unstyled" id="paketSubmenu">
-                                <li>
-                                    <a href="{{route('paket')}}" class="text-decoration-none">Semua paket</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('addPaket')}}"class="text-decoration-none">Tambah paket</a>
-                                </li>
-                            </ul>
+                            <li>
+                                <a href="{{ route('paket') }}"> Paket </a>
                             </li>
                             <li>
-                                <a href="{{ route('produk') }}" class="text-decoration-none"> Produk </a>
-                            </li>
-                            <li class="has-sub">
-                                <a href="#artikelSubmenu" data-bs-toggle="collapse" class="dropdown-toggle text-decoration-none"  
-                                   aria-expanded="false">
-                                    Artikel
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" 
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
-                                        stroke-linejoin="round" class="feather feather-chevron-right">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                    </svg>
-                                </a>
-                                <ul class="collapse submenu list-unstyled" id="artikelSubmenu">
-                                    <li>
-                                        <a href="{{ route('artikel') }}" class="text-decoration-none">Semua Artikel</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('artikelCreate')}}"class="text-decoration-none">Tambah Artikel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="text-decoration-none">Kategori Artikel</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-sub">
-                                <a href="#voucherSubmenu" data-bs-toggle="collapse" class="dropdown-toggle text-decoration-none"  
-                                aria-expanded="false">
-                                 Voucher
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" 
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
-                                     stroke-linejoin="round" class="feather feather-chevron-right">
-                                     <polyline points="9 18 15 12 9 6"></polyline>
-                                 </svg>
-                             </a>
-                             <ul class="collapse submenu list-unstyled" id="voucherSubmenu">
-                                <li>
-                                    <a href="{{route('voucher')}}" class="text-decoration-none">Semua Voucher</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('addVoucher')}}"class="text-decoration-none">Tambah Voucher</a>
-                                </li>
-                            </ul>
+                                <a href="{{ route('produk') }}"> Produk </a>
                             </li>
                             <li>
-                                <a href="{{ route('konsultasi') }}" class="text-decoration-none"> Konsultasi </a>
+                                <a href="{{ route('artikel') }}"> Artikel </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('voucher') }}"> Voucher </a>
                             </li>
                         </ul>
                     </li>
                 </ul>
+
             </nav>
         </div>
         
