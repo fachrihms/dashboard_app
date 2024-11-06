@@ -1,6 +1,6 @@
 @extends('dashboard.index')
 
-@section('title', 'Voucher List')
+@section('title', 'Add Voucher')
 
 @section('content')
 <div class="layout-px-spacing">
@@ -18,6 +18,7 @@
                                     <th>Kode Voucher</th>
                                     <th>Paket ID</th>
                                     <th>Diaktivasi Oleh</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,6 +30,11 @@
                                         <td>{{ $item['voucher_code'] }}</td>
                                         <td>{{ $item['paket_id'] }}</td>
                                         <td>{{ $item['user_used'] }}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-success"><i class="fas fa-plus"></i></button>
+                                            <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            <button type="button" class="btn btn-warning"><i class="fas fa-pencil"></i></button>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -1,6 +1,6 @@
 @extends('dashboard.index')
 
-@section('title', 'User List')
+@section('title', 'Produk List')
 
 @section('content')
     <div class="container-fluid">
@@ -25,6 +25,7 @@
                             <th>Gambar</th>
                             <th>Dibuat Pada</th>
                             <th>Diperbarui Pada</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +48,11 @@
                                 </td>
                                 <td>{{ $produk->created_at }}</td>
                                 <td>{{ $produk->updated_at }}</td>
+                                <td>                                                
+                                    <button type="button" class="btn btn-success"><i class="fas fa-plus"></i></button>
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pencil"></i></button>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
